@@ -2,6 +2,10 @@ import React, { useRef, useState } from 'react'
 
 export default function Header() {
     const barsRef = useRef()
+    const searchRef = useRef()
+
+
+
     const [tog , setTog] =useState(false)
     const Bars = () =>{
         setTog(!tog)
@@ -14,6 +18,17 @@ export default function Header() {
             },300)
         }
     }
+
+
+    const Search = ()=> {
+        searchRef.current.classList.add("vertical")
+        barsRef.current.classList.remove("translate")
+        setTog(false)
+    }
+    const Close = ()=> {
+        searchRef.current.classList.remove("vertical")
+    }
+
   return (
 <div className="header">
     <div className="container">
@@ -28,8 +43,15 @@ export default function Header() {
         </ul>
         <div className="icons">
         <i class={tog ? "fa-solid fa-times" : "fa-solid fa-bars"} onClick={Bars} ></i>
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-magnifying-glass"  onClick={Search} ></i>
         </div>
+    </div>
+    <div className="black" ref={searchRef}>
+        <form action="">
+            <input type="text" placeholder='Search Here ...' />
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </form>
+        <i className="fa-solid fa-times" onClick={Close} ></i>
     </div>
 </div>
   )
