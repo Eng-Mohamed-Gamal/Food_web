@@ -7,15 +7,15 @@ import "~slick-carousel/slick/slick-theme.css";
 
 
 import Header from './Common/Header';
+import Home from './Components/Home';
 import './app.css';
-import {BrowserRouter} from "react-router-dom";
+
 
 function App() {
   return (
     <div className="app">
-      <BrowserRouter>
       <Header></Header>
-      </BrowserRouter>
+      <Home></Home>
     </div>
   );
 }

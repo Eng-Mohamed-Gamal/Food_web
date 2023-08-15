@@ -1,20 +1,22 @@
 
 
 $main : #302a18;
-$text : #fde4c3 ;  
+$text-in : #fde4c3 ;  
 $box : 0px 0px 10px #ddd ;
 $tra : 0.3s linear ;
+$text-color : #b38b59 ;
 
 @mixin btn {
-    padding: 10px 20px ;
+    padding: 10px 30px ;
     text-transform: capitalize;
     background-color: $main;
     transition: all 0.3s;
-    color: $text;
+    border-radius: 10px;
+    color: $text-in;
     font-weight: bold;
+    cursor: pointer;
     &:hover{
-        background-color: black;
-
+       letter-spacing: 2px;
     }
 }
 
@@ -34,7 +36,7 @@ $tra : 0.3s linear ;
         &:hover{
           transition: $tra;
           background-color: $main;
-          color: $text;
+          color: $text-in;
         }
     }
     i.fa-bars ,i.fa-times{
@@ -77,6 +79,7 @@ a{
 
 
 .header{
+  background-color: $text-in;
     box-shadow: $box;
     padding: 10px 0px;
     position: sticky;
@@ -100,6 +103,7 @@ a{
             display: flex;
             align-items: center;
             gap: 15px;
+            z-index: 500;
             li{
                 a{
                     color: #999;
@@ -107,7 +111,7 @@ a{
                     padding: 10px 15px;
                     &:hover{
                         background-color: $main;
-                        color: $text;
+                        color: $text-in;
                         transition:$tra;
                     }  
                 }
@@ -115,8 +119,6 @@ a{
         }
     }
     .black{
-      position: relative;
-      z-index: 10000;
       transform: translateY(-100%);
       transition: $tra;
       position: fixed;
@@ -126,6 +128,8 @@ a{
       opacity: 0.6;
       top: 0;
       form{
+        position: relative;
+        // z-index: 100;
         width: 100%;
         height: 100%;
         display: flex;
@@ -220,3 +224,96 @@ a{
   }
 
   // Header
+
+  // Home
+
+  .home {
+    padding-bottom: 50px;
+    .container {
+      padding-top: 30px;
+      .slick-list{
+        z-index: -1;
+      }
+      .slick-arrow {
+        display: none !important;
+      }
+      .slick-dots {
+        display: flex !important;
+        justify-content: space-between;
+        bottom: -7%;
+        left: 50%;
+        width: 120px;
+        transform: translateX(-50%);
+        li {
+          button {
+            display: block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #333;
+            border-radius: 50%;
+            position: relative;
+  
+            &::before {
+              position: absolute;
+              content: "";
+              top: 50%;
+              left: 50%;
+              border-radius: 50%;
+              width: 10px;
+              height: 10px;
+              transform: translate(-50%, -50%);
+            }
+          }
+  
+          &.slick-active {
+            button::before {
+              background-color: $main;
+            }
+          }
+        }
+      }
+      .box {
+        display: flex !important ;
+        justify-content: space-between;
+        align-items: center;
+        .con {
+          width: 50%;
+          h3{
+            color: $text-color;
+          }
+          h1 {
+            width: 240px;
+            color: $main;
+            margin: 0%;
+          }
+          p{
+            color: #999;
+          }
+          button {
+            @include btn()
+          }
+        }
+        .img {
+          img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .home {
+      .box {
+        flex-direction: column;
+        .con {
+          order: 2;
+          width: 100% !important;
+        }
+      }
+    }
+  }
+
+  // Home
