@@ -1,3 +1,7 @@
+.index {
+  z-index: -1;
+}
+
 .icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,6 +38,7 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  text-transform: capitalize;
 }
 
 body {
@@ -57,10 +62,6 @@ li {
 
 a {
   text-decoration: none;
-}
-
-.app {
-  height: 2000px;
 }
 
 .header {
@@ -101,7 +102,6 @@ a {
       -ms-flex-align: center;
           align-items: center;
   gap: 15px;
-  z-index: 500;
 }
 .header .container ul li a {
   color: #999;
@@ -246,14 +246,29 @@ a {
           transform: translateY(0%) !important;
 }
 
+body {
+  position: relative;
+  z-index: -4;
+}
+
+#root {
+  position: relative;
+  z-index: -3;
+}
+
+.app {
+  height: 2000px;
+  z-index: -2;
+  position: relative;
+}
+
 .home {
   padding-bottom: 50px;
+  z-index: -1;
+  position: relative;
 }
 .home .container {
   padding-top: 30px;
-}
-.home .container .slick-list {
-  z-index: -1;
 }
 .home .container .slick-arrow {
   display: none !important;
@@ -303,6 +318,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 0;
 }
 .home .container .box .con {
   width: 50%;
@@ -333,8 +349,8 @@ a {
   letter-spacing: 2px;
 }
 .home .container .box .img img {
-  width: 300px;
-  height: 300px;
+  width: 360px;
+  height: 360px;
   border-radius: 50%;
 }
 

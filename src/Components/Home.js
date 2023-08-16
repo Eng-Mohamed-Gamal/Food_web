@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { createContext, useRef } from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
+
+
 export default function Home() {
+
+
     const settings = {
         dots: true,
         infinite: true,
@@ -13,9 +17,11 @@ export default function Home() {
         autoplay : true ,
         autoplaySpeed : 2000
       };
+
   return (
 <div className="home" id='Home'>
-    <div className="container">
+    <div className="container" id='in'>
+
 <Slider {...settings} >
 <div className="box">
                 <div className="con">
@@ -49,3 +55,5 @@ export default function Home() {
 </div>
   )
 }
+
+

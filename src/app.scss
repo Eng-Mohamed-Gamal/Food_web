@@ -19,6 +19,9 @@ $text-color : #b38b59 ;
        letter-spacing: 2px;
     }
 }
+.index{
+  z-index: -1;
+}
 
 .icons{
     display: flex;
@@ -47,6 +50,7 @@ $text-color : #b38b59 ;
 
 *{
     box-sizing: border-box;
+    text-transform:capitalize;
 }
 
 body{
@@ -71,9 +75,7 @@ a{
 }
 
 
-.app{
-    height: 2000px;
-}
+
 
 // Header
 
@@ -103,7 +105,6 @@ a{
             display: flex;
             align-items: center;
             gap: 15px;
-            z-index: 500;
             li{
                 a{
                     color: #999;
@@ -129,7 +130,6 @@ a{
       top: 0;
       form{
         position: relative;
-        // z-index: 100;
         width: 100%;
         height: 100%;
         display: flex;
@@ -226,14 +226,28 @@ a{
   // Header
 
   // Home
+body{
+  position: relative;
+  z-index: -4;
+}
+
+  #root{
+    position: relative;
+    z-index: -3;
+  }
+  
+  .app{
+      height: 2000px;
+      z-index: -2;
+      position: relative;
+  }
 
   .home {
     padding-bottom: 50px;
+    z-index: -1;
+    position: relative;
     .container {
       padding-top: 30px;
-      .slick-list{
-        z-index: -1;
-      }
       .slick-arrow {
         display: none !important;
       }
@@ -265,6 +279,8 @@ a{
             }
           }
   
+ 
+
           &.slick-active {
             button::before {
               background-color: $main;
@@ -276,6 +292,7 @@ a{
         display: flex !important ;
         justify-content: space-between;
         align-items: center;
+        z-index: 0;
         .con {
           width: 50%;
           h3{
@@ -295,12 +312,13 @@ a{
         }
         .img {
           img {
-            width: 300px;
-            height: 300px;
+            width: 360px;
+            height: 360px;
             border-radius: 50%;
           }
         }
       }
+
     }
   }
   

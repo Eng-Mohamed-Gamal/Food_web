@@ -1,10 +1,12 @@
 import React, { useRef, useState } from 'react'
+let Handle = document.getElementById("#in")
+
+
+
 
 export default function Header() {
     const barsRef = useRef()
     const searchRef = useRef()
-
-
 
     const [tog , setTog] =useState(false)
     const Bars = () =>{
@@ -18,6 +20,8 @@ export default function Header() {
             },300)
         }
     }
+
+
 
 
     const Search = ()=> {

@@ -7,7 +7,7 @@ import "~slick-carousel/slick/slick-theme.css";
 
 
 import Header from './Common/Header';
-import Home from './Components/Home';
+import Home, { Provider } from './Components/Home';
 import './app.css';
 
 
