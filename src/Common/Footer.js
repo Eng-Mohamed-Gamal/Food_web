@@ -22,7 +22,7 @@ const [text] = useTypewriter({
         <ul className='col'>
             <h2>quick links</h2>
             <li> <a href="#Home"  > Home </a>   </li>
-            <li> <a href="#Dishes"  > Dishes </a>   </li>
+            <li> <a href="#Desert"  > Dishes </a>   </li>
             <li> <a href="#About"  >About </a>   </li>
             <li> <a href="#Menu"  > Menu </a>   </li>
             <li> <a href="#Review"  > Review </a>   </li>

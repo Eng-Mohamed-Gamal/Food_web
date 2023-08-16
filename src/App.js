@@ -10,12 +10,12 @@ import { useEffect, useLayoutEffect, useRef } from 'react';
 import Footer from './Common/Footer';
 import Header from './Common/Header';
 import About from './Components/About';
-import Dishes from './Components/Dishes';
 import Home, { Provider } from './Components/Home';
 import Menu from './Components/Menu';
 import Order from './Components/Order';
 import Review from './Components/Review';
 import './app.css';
+import Desert from './Components/Desert';
 
 
 function App() {
@@ -32,7 +32,7 @@ useEffect(()=>{
     <div className="app">
       <Header></Header>
       <Home></Home>
-      <Dishes></Dishes>
+      <Desert></Desert>
       <About></About>
       <Menu></Menu>
       <Review></Review>

@@ -401,22 +401,22 @@ body {
     height: 260px;
   }
 }
-.dishes {
+.desert {
   z-index: -2;
   position: relative;
   background-color: #ddd;
   padding-bottom: 30px;
 }
-.dishes > h2 {
+.desert > h2 {
   padding: 20px 0px;
   color: #f7b968;
   margin: 0%;
 }
-.dishes h1 {
+.desert h1 {
   margin: 0%;
   color: #b38b59;
 }
-.dishes .container {
+.desert .container {
   padding-top: 40px;
   display: -ms-grid;
   display: grid;
@@ -425,7 +425,7 @@ body {
   z-index: -1;
   position: relative;
 }
-.dishes .container .box {
+.desert .container .box {
   position: relative;
   text-align: center;
   -webkit-box-shadow: 0px 0px 10px white;
@@ -434,21 +434,21 @@ body {
   padding: 20px;
   overflow: hidden;
 }
-.dishes .container .box h2 {
+.desert .container .box h2 {
   color: #b38b59;
 }
-.dishes .container .box h3 {
+.desert .container .box h3 {
   color: #f7b968;
 }
-.dishes .container .box .img img {
+.desert .container .box .img img {
   width: 160px;
   height: 160px;
   border-radius: 50%;
 }
-.dishes .container .box i {
+.desert .container .box i {
   color: #f7b968;
 }
-.dishes .container .box .flex {
+.desert .container .box .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -464,7 +464,7 @@ body {
   -webkit-transform: translateY(120%);
           transform: translateY(120%);
 }
-.dishes .container .box .flex button {
+.desert .container .box .flex button {
   padding: 10px 20px;
   text-transform: capitalize;
   background-color: #302a18;
@@ -479,22 +479,22 @@ body {
   -webkit-transform: translateX(400px);
           transform: translateX(400px);
 }
-.dishes .container .box .flex button:hover {
+.desert .container .box .flex button:hover {
   -webkit-transform-origin: left;
           transform-origin: left;
   letter-spacing: 2px;
 }
-.dishes .container .box .flex h3 {
+.desert .container .box .flex h3 {
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
   -webkit-transform: translateX(-400px);
           transform: translateX(-400px);
 }
-.dishes .container .box:hover .flex {
+.desert .container .box:hover .flex {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
 }
-.dishes .container .box:hover .flex h3, .dishes .container .box:hover .flex button {
+.desert .container .box:hover .flex h3, .desert .container .box:hover .flex button {
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
 }
