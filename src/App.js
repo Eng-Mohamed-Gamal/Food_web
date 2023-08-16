@@ -7,6 +7,8 @@ import "~slick-carousel/slick/slick-theme.css";
 
 
 import Header from './Common/Header';
+import About from './Components/About';
+import Dishes from './Components/Dishes';
 import Home, { Provider } from './Components/Home';
 import './app.css';
 
@@ -16,6 +18,8 @@ function App() {
     <div className="app">
       <Header></Header>
       <Home></Home>
+      <Dishes></Dishes>
+      <About></About>
     </div>
   );
 }

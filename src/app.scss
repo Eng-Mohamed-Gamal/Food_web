@@ -1,13 +1,15 @@
 
 
 $main : #302a18;
-$text-in : #fde4c3 ;  
+$text-in : #f7b968 ;  
 $box : 0px 0px 10px #ddd ;
 $tra : 0.3s linear ;
 $text-color : #b38b59 ;
+$template-Columns :repeat(auto-fill , minmax(350px , 1fr));
+$template-Columns-small :repeat(auto-fill , minmax(260px , 1fr));
 
 @mixin btn {
-    padding: 10px 30px ;
+    padding: 10px 20px ;
     text-transform: capitalize;
     background-color: $main;
     transition: all 0.3s;
@@ -16,11 +18,13 @@ $text-color : #b38b59 ;
     font-weight: bold;
     cursor: pointer;
     &:hover{
+      transform-origin: left;
        letter-spacing: 2px;
     }
 }
-.index{
-  z-index: -1;
+
+.cen{
+  text-align: center;
 }
 
 .icons{
@@ -137,7 +141,7 @@ a{
         justify-content: center;
         align-items: center;
         input{
-          width: 280px;
+          width: 320px;
           padding: 10px 0px;
           border: none;
           background-color: $main;
@@ -223,6 +227,27 @@ a{
     transform: translateY(0%) !important;
   }
 
+  @media (max-width:440px){
+    .header{
+.black{
+  form{
+    flex-direction: column;
+    input{
+      width: 260px;
+    }
+    i{
+      // margin-top: 30px;
+      padding:  20px;
+      background-color: $text-color;
+      border-radius: 50%;
+      display: block;
+      transform: translateY(30px);
+    }
+  }
+}
+    }
+  }
+
   // Header
 
   // Home
@@ -237,7 +262,6 @@ body{
   }
   
   .app{
-      height: 2000px;
       z-index: -2;
       position: relative;
   }
@@ -311,9 +335,11 @@ body{
           }
         }
         .img {
+          width: 360px;
+          height: 360px;
           img {
-            width: 360px;
-            height: 360px;
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
           }
         }
@@ -333,5 +359,170 @@ body{
       }
     }
   }
+  @media (max-width: 440px) {
+    .home {
+      .container{
+        .slick-slide{
+          .box {
+            .img{
+              width: 260px;
+              height: 260px;
+            }
+          }
+        }
+      }
+    }
+  }
 
   // Home
+
+  .app{
+    height: 300000px;
+  }
+  // Dishes
+
+.dishes{
+z-index: -2;
+position: relative;
+  background-color: #ddd;
+  padding-bottom: 30px;
+  & > h2{
+    padding: 20px 0px;
+    color: $text-in;
+    margin: 0%;
+  }
+  h1{
+    margin: 0%;
+    color: $text-color;
+  }
+  .container{
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: $template-Columns;
+    gap: 20px;
+    z-index: -1;
+    position: relative;
+    .box{
+      position: relative;
+      text-align: center;
+      box-shadow: 0px 0px 10px white;
+      background-color: white;
+      padding: 20px;
+      overflow: hidden;
+      h2{
+        color: $text-color;
+      }
+      h3{
+        color: $text-in;
+      }
+      .img{
+        img{
+          width: 160px;
+          height: 160px;
+          border-radius: 50%;
+        }
+      }
+      i{
+        color: $text-in;
+      }
+      .flex{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        transition: $tra;
+        transform: translateY(120%);
+        button{
+          @include btn() ;
+          transition: $tra;
+          transform: translateX(400px);
+        }
+        h3{
+          transition: $tra;
+          transform: translateX(-400px);
+        }
+      }
+      &:hover{
+        .flex{
+          transform: translateY(0%);
+          h3,button{
+            transform: translateX(0px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .dishes {
+    .container{
+      grid-template-columns: $template-Columns-small ;
+    }
+  }
+}
+
+
+  // Dishes
+
+  // About
+
+  .about {
+    h2{
+      color: $text-in;
+    }
+    h1{
+      color: $text-color;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      .img {
+        flex: 1 400px;
+        img {
+          width: 100%;
+          height: 500px;
+        }
+      }
+      .con {
+        flex: 1 1 400px;
+        h2 {
+          color: $text-color;
+        }
+        p {
+          color: #999;
+        }
+        button {
+          @include btn();
+        }
+        .all {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 10px;
+          .go {
+            flex: 1 1 200px;
+            height: 150px;
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            i {
+              color: $text-in;
+              cursor: pointer;
+              font-size: 25px;
+            }
+          }
+        }
+        button{
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  // About
