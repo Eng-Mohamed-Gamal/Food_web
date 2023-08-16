@@ -65,6 +65,8 @@ a {
 }
 
 .header {
+  background-image: url("/public/images/bg.jpg");
+  background-position: right;
   background-color: #f7b968;
   -webkit-box-shadow: 0px 0px 10px #ddd;
           box-shadow: 0px 0px 10px #ddd;
@@ -105,7 +107,7 @@ a {
   gap: 15px;
 }
 .header .container ul li a {
-  color: white;
+  color: #b38b59;
   border-radius: 5px;
   padding: 10px 15px;
 }
@@ -867,6 +869,8 @@ body {
 }
 .footer {
   background-color: #f7b968;
+  background-image: url("/public/images/bg.jpg");
+  background-size: cover;
 }
 .footer .container {
   display: -ms-grid;
@@ -874,7 +878,7 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 .footer .container .col h2 {
-  color: white;
+  color: #b38b59;
 }
 .footer .container .col p {
   color: #302a18;

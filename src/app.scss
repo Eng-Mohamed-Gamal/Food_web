@@ -86,6 +86,8 @@ a{
 
 
 .header{
+  background-image: url("/public/images/bg.jpg");
+  background-position:right;
   background-color: $text-in;
     box-shadow: $box;
     padding: 10px 0px;
@@ -113,7 +115,7 @@ a{
             gap: 15px;
             li{
                 a{
-                    color: white;
+                    color: $text-color;
                     border-radius: 5px;
                     padding: 10px 15px;
                     &:hover{
@@ -773,12 +775,14 @@ position: relative;
 
 .footer{
   background-color: $text-in;
+  background-image: url("/public/images/bg.jpg");
+background-size: cover;
   .container{
     display: grid;
     grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
     .col{
       h2{
-        color: white;
+        color: $text-color;
       }
       p{
         color: $main;

@@ -25,7 +25,7 @@ const ref = useRef()
 useEffect(()=>{
   setTimeout(()=>{
     ref.current.style.display = "none"
-  },3800)
+  },3000)
 })
 
   return (
@@ -39,7 +39,7 @@ useEffect(()=>{
       <Order></Order>
       <Footer></Footer>
       <div className="loader" ref={ref}>
-    <img src="images/Burger.gif" alt="" />
+    <img src="images/loader.gif" alt="" />
       </div>
     </div>
   );
