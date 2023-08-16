@@ -91,6 +91,7 @@ a{
     padding: 10px 0px;
     position: sticky;
     top: 0px;
+    z-index: 1000;
     .container{
         display: flex;
         justify-content: space-between;
@@ -378,9 +379,7 @@ body{
 
   // Home
 
-  .app{
-    height: 300000px;
-  }
+
   // Dishes
 
 .dishes{
@@ -673,6 +672,7 @@ position: relative;
     }
       
     }
+    padding-bottom: 40px;
   }
 
 
@@ -693,3 +693,122 @@ position: relative;
 }
 
 // Review
+
+
+// Order
+
+.order{
+  padding: 20px 0px;
+  background-color: #ddd;
+  h2 {
+    color: $text-in;
+    margin-top: 0px;
+  }
+
+  h1 {
+    color: $text-color;
+  }
+  .container{
+    form{
+      width: 100%;
+      background-color: white;
+      padding: 20px 0px;
+      .all{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .col{
+          .part{
+                padding: 0px 20px;
+                h3{
+                  color: $text-color;
+                }
+                input,textarea{
+                  width: 100%;
+                  background-color: #ddd;
+                  outline: none;
+                  border: none;
+                  resize: none;
+                  overflow: hidden;
+                }                     
+                input::placeholder,textarea::placeholder{
+                  text-transform: lowercase;
+                  transform: translateX(20px);
+                  color: $main;
+                }
+                input{
+                  padding: 10px 0px;
+                }                 
+          }
+        }
+      }
+    }
+    button{
+      @include btn();
+      margin-top: 20px;
+      width: 150px;
+      margin: 20px auto;
+      display: block;
+    }
+  }
+}
+
+@media (max-width : 750px) {
+  .order{
+    .container{
+      form{
+        .all{
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+}
+
+// Order
+
+
+// Footer
+
+.footer{
+  background-color: $text-in;
+  .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    .col{
+      h2{
+        color: white;
+      }
+      p{
+        color: $main;
+        font-weight: bold;
+      }
+    }
+    ul{
+      margin: 0%;
+      padding: 0%;
+      li{
+        padding: 6px 0px;
+        a{
+          color: $main;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  h3.cen{
+    border-top: 1px solid white;
+    margin: 0%;
+    padding: 20px 0px;
+    color: white;
+  }
+}
+
+@media (max-width : 420px)  {
+  .footer{
+    .container{
+      grid-template-columns: $template-Columns-small;
+    }
+  }
+}
+
+// Footer 

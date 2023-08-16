@@ -71,6 +71,7 @@ a {
   padding: 10px 0px;
   position: sticky;
   top: 0px;
+  z-index: 1000;
 }
 .header .container {
   display: -webkit-box;
@@ -399,10 +400,6 @@ body {
     height: 260px;
   }
 }
-.app {
-  height: 300000px;
-}
-
 .dishes {
   z-index: -2;
   position: relative;
@@ -693,6 +690,7 @@ body {
 .review {
   position: relative;
   z-index: -2;
+  padding-bottom: 40px;
 }
 .review > h2 {
   color: #f7b968;
@@ -770,5 +768,136 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+.order {
+  padding: 20px 0px;
+  background-color: #ddd;
+}
+.order h2 {
+  color: #f7b968;
+  margin-top: 0px;
+}
+.order h1 {
+  color: #b38b59;
+}
+.order .container form {
+  width: 100%;
+  background-color: white;
+  padding: 20px 0px;
+}
+.order .container form .all {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+.order .container form .all .col .part {
+  padding: 0px 20px;
+}
+.order .container form .all .col .part h3 {
+  color: #b38b59;
+}
+.order .container form .all .col .part input, .order .container form .all .col .part textarea {
+  width: 100%;
+  background-color: #ddd;
+  outline: none;
+  border: none;
+  resize: none;
+  overflow: hidden;
+}
+.order .container form .all .col .part input::-webkit-input-placeholder, .order .container form .all .col .part textarea::-webkit-input-placeholder {
+  text-transform: lowercase;
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+  color: #302a18;
+}
+.order .container form .all .col .part input::-moz-placeholder, .order .container form .all .col .part textarea::-moz-placeholder {
+  text-transform: lowercase;
+  transform: translateX(20px);
+  color: #302a18;
+}
+.order .container form .all .col .part input:-ms-input-placeholder, .order .container form .all .col .part textarea:-ms-input-placeholder {
+  text-transform: lowercase;
+  transform: translateX(20px);
+  color: #302a18;
+}
+.order .container form .all .col .part input::-ms-input-placeholder, .order .container form .all .col .part textarea::-ms-input-placeholder {
+  text-transform: lowercase;
+  transform: translateX(20px);
+  color: #302a18;
+}
+.order .container form .all .col .part input::placeholder, .order .container form .all .col .part textarea::placeholder {
+  text-transform: lowercase;
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+  color: #302a18;
+}
+.order .container form .all .col .part input {
+  padding: 10px 0px;
+}
+.order .container button {
+  padding: 10px 20px;
+  text-transform: capitalize;
+  background-color: #302a18;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 10px;
+  color: #f7b968;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 150px;
+  margin: 20px auto;
+  display: block;
+}
+.order .container button:hover {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 750px) {
+  .order .container form .all {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+.footer {
+  background-color: #f7b968;
+}
+.footer .container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.footer .container .col h2 {
+  color: white;
+}
+.footer .container .col p {
+  color: #302a18;
+  font-weight: bold;
+}
+.footer .container ul {
+  margin: 0%;
+  padding: 0%;
+}
+.footer .container ul li {
+  padding: 6px 0px;
+}
+.footer .container ul li a {
+  color: #302a18;
+  font-weight: bold;
+}
+.footer h3.cen {
+  border-top: 1px solid white;
+  margin: 0%;
+  padding: 20px 0px;
+  color: white;
+}
+
+@media (max-width: 420px) {
+  .footer .container {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   }
 }
