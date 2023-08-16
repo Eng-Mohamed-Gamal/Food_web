@@ -261,6 +261,7 @@ body{
   #root{
     position: relative;
     z-index: -3;
+    min-height: 100vh;
   }
   
   .app{
@@ -498,6 +499,7 @@ position: relative;
         }
         button {
           @include btn();
+          margin-bottom: 20px;
         }
         .all {
           display: flex;
@@ -811,4 +813,23 @@ position: relative;
   }
 }
 
-// Footer 
+
+
+// Footer
+
+// Loader
+
+.loader{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background-color: white;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Loader

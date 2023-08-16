@@ -274,6 +274,7 @@ body {
 #root {
   position: relative;
   z-index: -3;
+  min-height: 100vh;
 }
 
 .app {
@@ -550,6 +551,7 @@ body {
   color: #f7b968;
   font-weight: bold;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 .about .container .con button:hover {
   -webkit-transform-origin: left;
@@ -900,4 +902,22 @@ body {
   .footer .container {
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   }
+}
+.loader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background-color: white;
+  z-index: 2000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }

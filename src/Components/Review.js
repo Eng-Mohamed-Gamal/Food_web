@@ -48,7 +48,7 @@ export default function Review() {
         <Slider {...settings}> 
         {arr.map( (src , index) => {
             return (
-                <div className="box">
+                <div className="box" key={index}>
                 <div className="flex">
                     <div className="flex-in">
                         <img src={src} alt="" />

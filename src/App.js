@@ -6,6 +6,7 @@ import "~slick-carousel/slick/slick-theme.css";
 */
 
 
+import { useEffect, useLayoutEffect, useRef } from 'react';
 import Footer from './Common/Footer';
 import Header from './Common/Header';
 import About from './Components/About';
@@ -18,6 +19,15 @@ import './app.css';
 
 
 function App() {
+
+const ref = useRef()
+
+useEffect(()=>{
+  setTimeout(()=>{
+    ref.current.style.display = "none"
+  },3800)
+})
+
   return (
     <div className="app">
       <Header></Header>
@@ -28,6 +38,9 @@ function App() {
       <Review></Review>
       <Order></Order>
       <Footer></Footer>
+      <div className="loader" ref={ref}>
+    <img src="images/Burger.gif" alt="" />
+      </div>
     </div>
   );
 }
