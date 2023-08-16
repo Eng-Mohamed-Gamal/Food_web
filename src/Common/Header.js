@@ -39,7 +39,7 @@ export default function Header() {
         <div className="logo"><img src="images/logo.png" alt="" /></div>
         <ul ref={barsRef}>
             <li> <a href="#Home"  > Home </a>   </li>
-            <li> <a href="#Desert"  > Dishes </a>   </li>
+            <li> <a href="#Desert"  > Desert </a>   </li>
             <li> <a href="#About"  >About </a>   </li>
             <li> <a href="#Menu"  > Menu </a>   </li>
             <li> <a href="#Review"  > Review </a>   </li>
