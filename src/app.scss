@@ -7,6 +7,7 @@ $tra : 0.3s linear ;
 $text-color : #b38b59 ;
 $template-Columns :repeat(auto-fill , minmax(350px , 1fr));
 $template-Columns-small :repeat(auto-fill , minmax(260px , 1fr));
+$box-shadow : 0px 0px 10px #ddd;
 
 @mixin btn {
     padding: 10px 20px ;
@@ -111,7 +112,7 @@ a{
             gap: 15px;
             li{
                 a{
-                    color: #999;
+                    color: white;
                     border-radius: 5px;
                     padding: 10px 15px;
                     &:hover{
@@ -300,6 +301,7 @@ body{
               width: 10px;
               height: 10px;
               transform: translate(-50%, -50%);
+              background-color: $main;
             }
           }
   
@@ -307,7 +309,7 @@ body{
 
           &.slick-active {
             button::before {
-              background-color: $main;
+              background-color: $text-in;
             }
           }
         }
@@ -426,7 +428,6 @@ position: relative;
         color: $text-in;
       }
       .flex{
-
         display: flex;
         justify-content: center;
         align-items: center;
@@ -454,6 +455,7 @@ position: relative;
     }
   }
 }
+
 
 @media (max-width: 440px) {
   .dishes {
@@ -526,3 +528,168 @@ position: relative;
   }
 
   // About
+
+  // Menu
+
+.menu{
+    z-index: -2;
+    position: relative;
+      background-color: #ddd;
+      padding-bottom: 30px;
+      & > h2{
+        padding: 20px 0px;
+        color: $text-in;
+        margin: 0%;
+      }
+      h1{
+        margin: 0%;
+        color: $text-color;
+      }
+      .container{
+        padding-top: 40px;
+        display: grid;
+        grid-template-columns: $template-Columns;
+        gap: 20px;
+        z-index: -1;
+        position: relative;
+        .box{
+          position: relative;
+          // text-align: center;
+          box-shadow: 0px 0px 10px white;
+          background-color: white;
+          padding: 20px;
+          overflow: hidden;
+          h2{
+            color: $text-color;
+          }
+          h3{
+            color: $text-in;
+          }
+          .img{
+            img{
+              width: 100%;
+              height: 250px;
+              border-radius: 10px;
+            }
+          }
+          i{
+            margin-top: 10px;
+            color: $text-in;
+          }
+          .flex{
+    
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+            button{
+              @include btn() ;
+            }
+            h3{
+
+              order: 2;
+            }
+          }
+          &:hover{
+            .flex{
+              transform: translateY(0%);
+              h3,button{
+                transform: translateX(0px);
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    @media (max-width: 440px) {
+      .menu {
+        .container{
+          grid-template-columns: $template-Columns-small ;
+        }
+      }
+    }
+
+
+  // Menu
+
+
+  // Review
+
+.review {
+  position: relative;
+  z-index: -2;
+  & > h2{
+    color: $text-in;
+  }
+  h1{
+    color: $text-color;
+  }
+  .container {
+    z-index: -1;
+    position: relative;
+    .slick-slide > div {
+      margin: 0px 10px;
+    }
+    .slick-arrow {
+      display: none !important;
+    }
+    .box {
+      box-shadow: $box-shadow;
+      padding: 20px;
+      border: 1px solid #ddd;
+      p {
+        color: #999;
+      }
+      .flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .flex-in{
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          img{
+            width: 80px ;
+            height: 80px;
+            border-radius: 50%;
+          }
+          .con{
+            h2{
+              margin: 0%;
+              color: $text-color;
+            }
+            i{
+              color: $text-in;
+            }
+          }
+        }
+        i.fa-quote-right{
+          font-size: 50px;
+          color: $main;
+        }
+      }
+      
+    }
+      
+    }
+  }
+
+
+@media (max-width: 400px) {
+  .review {
+    .container {
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      .box{
+        .flex{
+          align-items: flex-start;
+          .flex-in{
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Review

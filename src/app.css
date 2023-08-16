@@ -104,7 +104,7 @@ a {
   gap: 15px;
 }
 .header .container ul li a {
-  color: #999;
+  color: white;
   border-radius: 5px;
   padding: 10px 15px;
 }
@@ -322,9 +322,10 @@ body {
   height: 10px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  background-color: #302a18;
 }
 .home .container .slick-dots li.slick-active button::before {
-  background-color: #302a18;
+  background-color: #f7b968;
 }
 .home .container .box {
   display: -webkit-box !important;
@@ -593,4 +594,181 @@ body {
 }
 .about .container .con button {
   margin-top: 20px;
+}
+
+.menu {
+  z-index: -2;
+  position: relative;
+  background-color: #ddd;
+  padding-bottom: 30px;
+}
+.menu > h2 {
+  padding: 20px 0px;
+  color: #f7b968;
+  margin: 0%;
+}
+.menu h1 {
+  margin: 0%;
+  color: #b38b59;
+}
+.menu .container {
+  padding-top: 40px;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+  z-index: -1;
+  position: relative;
+}
+.menu .container .box {
+  position: relative;
+  -webkit-box-shadow: 0px 0px 10px white;
+          box-shadow: 0px 0px 10px white;
+  background-color: white;
+  padding: 20px;
+  overflow: hidden;
+}
+.menu .container .box h2 {
+  color: #b38b59;
+}
+.menu .container .box h3 {
+  color: #f7b968;
+}
+.menu .container .box .img img {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+.menu .container .box i {
+  margin-top: 10px;
+  color: #f7b968;
+}
+.menu .container .box .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.menu .container .box .flex button {
+  padding: 10px 20px;
+  text-transform: capitalize;
+  background-color: #302a18;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 10px;
+  color: #f7b968;
+  font-weight: bold;
+  cursor: pointer;
+}
+.menu .container .box .flex button:hover {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  letter-spacing: 2px;
+}
+.menu .container .box .flex h3 {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+.menu .container .box:hover .flex {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+.menu .container .box:hover .flex h3, .menu .container .box:hover .flex button {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+@media (max-width: 440px) {
+  .menu .container {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}
+.review {
+  position: relative;
+  z-index: -2;
+}
+.review > h2 {
+  color: #f7b968;
+}
+.review h1 {
+  color: #b38b59;
+}
+.review .container {
+  z-index: -1;
+  position: relative;
+}
+.review .container .slick-slide > div {
+  margin: 0px 10px;
+}
+.review .container .slick-arrow {
+  display: none !important;
+}
+.review .container .box {
+  -webkit-box-shadow: 0px 0px 10px #ddd;
+          box-shadow: 0px 0px 10px #ddd;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+.review .container .box p {
+  color: #999;
+}
+.review .container .box .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.review .container .box .flex .flex-in {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.review .container .box .flex .flex-in img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.review .container .box .flex .flex-in .con h2 {
+  margin: 0%;
+  color: #b38b59;
+}
+.review .container .box .flex .flex-in .con i {
+  color: #f7b968;
+}
+.review .container .box .flex i.fa-quote-right {
+  font-size: 50px;
+  color: #302a18;
+}
+
+@media (max-width: 400px) {
+  .review .container {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+  .review .container .box .flex {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .review .container .box .flex .flex-in {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }

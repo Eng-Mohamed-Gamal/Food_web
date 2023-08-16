@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 const arr = [
   "images/Dish/dish-1.jpg",
@@ -10,6 +10,8 @@ const arr = [
 ];
 
 export default function Dishes() {
+
+
   return (
     <div className="dishes" id="Dishes">
         <h2 className="cen">our dishes</h2>
@@ -25,7 +27,7 @@ export default function Dishes() {
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star-half-stroke"></i>
-                    <div className="flex">
+                    <div className="flex" >
                         <h3>$15.99</h3>
                         <button>add to cart</button>
                     </div>

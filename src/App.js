@@ -10,6 +10,8 @@ import Header from './Common/Header';
 import About from './Components/About';
 import Dishes from './Components/Dishes';
 import Home, { Provider } from './Components/Home';
+import Menu from './Components/Menu';
+import Review from './Components/Review';
 import './app.css';
 
 
@@ -20,6 +22,8 @@ function App() {
       <Home></Home>
       <Dishes></Dishes>
       <About></About>
+      <Menu></Menu>
+      <Review></Review>
     </div>
   );
 }
