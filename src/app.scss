@@ -438,20 +438,12 @@ position: relative;
         transform: translateY(120%);
         button{
           @include btn() ;
-          transition: $tra;
-          transform: translateX(400px);
         }
-        h3{
-          transition: $tra;
-          transform: translateX(-400px);
-        }
+
       }
       &:hover{
         .flex{
           transform: translateY(0%);
-          h3,button{
-            transform: translateX(0px);
-          }
         }
       }
     }

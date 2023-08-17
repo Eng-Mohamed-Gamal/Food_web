@@ -476,29 +476,15 @@ body {
   color: #f7b968;
   font-weight: bold;
   cursor: pointer;
-  -webkit-transition: 0.3s linear;
-  transition: 0.3s linear;
-  -webkit-transform: translateX(400px);
-          transform: translateX(400px);
 }
 .desert .container .box .flex button:hover {
   -webkit-transform-origin: left;
           transform-origin: left;
   letter-spacing: 2px;
 }
-.desert .container .box .flex h3 {
-  -webkit-transition: 0.3s linear;
-  transition: 0.3s linear;
-  -webkit-transform: translateX(-400px);
-          transform: translateX(-400px);
-}
 .desert .container .box:hover .flex {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
-}
-.desert .container .box:hover .flex h3, .desert .container .box:hover .flex button {
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
 }
 
 @media (max-width: 440px) {
