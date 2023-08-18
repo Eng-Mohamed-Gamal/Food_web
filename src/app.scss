@@ -794,10 +794,10 @@ background-size: cover;
     }
   }
   h3.cen{
-    border-top: 1px solid white;
-    margin: 0%;
+    margin-top: 10px;
+    border-top: 2px solid $text-in;
     padding: 20px 0px;
-    color: white;
+    color: $text-color;
   }
 }
 

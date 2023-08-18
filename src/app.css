@@ -882,10 +882,10 @@ body {
   font-weight: bold;
 }
 .footer h3.cen {
-  border-top: 1px solid white;
-  margin: 0%;
+  margin-top: 10px;
+  border-top: 2px solid #f7b968;
   padding: 20px 0px;
-  color: white;
+  color: #b38b59;
 }
 
 @media (max-width: 420px) {
