@@ -383,7 +383,7 @@ body{
   // Home
 
 
-  // Dishes
+  // Desert
 
 .desert{
 z-index: -2;
@@ -435,16 +435,11 @@ position: relative;
         align-items: center;
         gap: 20px;
         transition: $tra;
-        transform: translateY(120%);
+       
         button{
           @include btn() ;
         }
 
-      }
-      &:hover{
-        .flex{
-          transform: translateY(0%);
-        }
       }
     }
   }
@@ -460,7 +455,7 @@ position: relative;
 }
 
 
-  // Dishes
+  // Desert
 
   // About
 

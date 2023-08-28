@@ -463,8 +463,6 @@ body {
   gap: 20px;
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
-  -webkit-transform: translateY(120%);
-          transform: translateY(120%);
 }
 .desert .container .box .flex button {
   padding: 10px 20px;
@@ -481,10 +479,6 @@ body {
   -webkit-transform-origin: left;
           transform-origin: left;
   letter-spacing: 2px;
-}
-.desert .container .box:hover .flex {
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
 }
 
 @media (max-width: 440px) {
