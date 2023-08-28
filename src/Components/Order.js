@@ -1,12 +1,15 @@
 import React from 'react'
 
 export default function Order() {
+  const onSub = (e)=>{
+    e.preventDefault()
+  }
   return (
 <div className="order" id='Order'>
     <h2 className='cen'>order now</h2>
     <h1 className='cen'>free and fast</h1>
     <div className="container">
-        <form action="">
+        <form action="" onSubmit={onSub}>
 <div className="all">
 <div className="col">
               <div className="part">
